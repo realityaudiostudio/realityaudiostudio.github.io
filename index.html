@@ -103,9 +103,9 @@ div.example {
 </head>
 <body>
     <div style="width: 100%; height: 20px;"></div>
-    <div class="head" ><img src="img/logo.png"width="33" height="33"><a href="#" class="show_hide"><img class="ic" src="img/icon.png" width="43" height="43" ></a></div>
+    <div class="head" ><img src="img/logo.png"width="33" height="33"><img class="ic" src="img/icon.png" onclick="myFunction()" width="43" height="43" ></div>
     <div style="width: 100%; height: 20px; background-color: white;"></div>
-    <div class="slidingDiv"><ul>
+    <div><ul id="ajs">
         <li><a href="#home">Home</a></li>
         <li><a href="#news">Releases</a></li>
         <li><a href="#contact">Artists</a></li>
@@ -134,5 +134,19 @@ div.example {
             <img src="img/logo.png" alt="Trulli" style="width:80px; height: 80px;">
             <img src="img/logo.png" alt="Trulli" style="width:80px; height: 80px;">
             <img src="img/logo.png" alt="Trulli" style="width:80px; height: 80px;"></div>
-          
+        <script> function myFunction() {
+
+  var x = document.getElementById("ajs");
+
+  if (x.style.display === "none") {
+
+    x.style.display = "block";
+
+  } else {
+
+    x.style.display = "none";
+
+  }
+
+} </script>
 </body>
