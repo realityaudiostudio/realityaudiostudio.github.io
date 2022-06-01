@@ -54,7 +54,7 @@ ul {
   height: 30px;
   overflow: hidden;
   background-color: #000000;
-  opacity:0.8;
+  opacity:0.6;
   position: fixed;
   width:100%
 }
@@ -103,6 +103,19 @@ div.example {
       -ms-overflow-style: none;  /* IE and Edge */
       scrollbar-width: none;  /* Firefox */
     }
+    #overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
     
   </style>
 </head>
@@ -152,19 +165,27 @@ div.example {
             <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
 
             <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;"></div>
+  <div id="overlay"><p>ALAN JOSE SANTO</p></div>
         <script> function myFunction() {
 
   var x = document.getElementById("ajs");
 
-  if (x.style.display === "block") {
+  if (x.style.display === "none") {
 
-    x.style.display = "none";
+    x.style.display = "block";
 
   } else {
 
-    x.style.display = "block";
+    x.style.display = "none";
 
   }
 
 } </script>
+  function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
 </body>
