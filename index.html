@@ -131,7 +131,7 @@ div.example {
         <li><a href="#about">Gallery</a></li>
       </ul></div>
       <p class="subh">What's new</p>
-      <div class="example"><img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+      <div class="example"><img src="img/Rectangle 2.png" onclick="on()" alt="Trulli" style="width:80px; height: 80px;">
         <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
         <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
         <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
@@ -165,7 +165,7 @@ div.example {
             <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
 
             <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;"></div>
-  <div id="overlay"><p>ALAN JOSE SANTO</p></div>
+  <div id="overlay"><p>ALAN JOSE SANTO<button onclick="off()">off</button></p></div>
         <script> function myFunction() {
 
   var x = document.getElementById("ajs");
@@ -181,11 +181,11 @@ div.example {
   }
 
 } </script>
-  function on() {
+ <script> function on() {
   document.getElementById("overlay").style.display = "block";
 }
 
 function off() {
   document.getElementById("overlay").style.display = "none";
-}
+}</script>
 </body>
