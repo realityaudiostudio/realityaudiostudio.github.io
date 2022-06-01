@@ -165,7 +165,13 @@ div.example {
             <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
 
             <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;"></div>
-  <div id="overlay"><p>ALAN JOSE SANTO<button onclick="off()">off</button></p></div>
+  <div id="overlay"><audioid = "player" src = "kalimba.wav"></audio>
+<div>
+   <buttononclick = "document.getElementById('player').play()">Play</button>
+   <buttononclick = "document.getElementById('player').pause()">Pause</button>
+   <buttononclick = "document.getElementById('player').volume += 0.2">Vol+</button>
+   <buttononclick = "document.getElementById('player').volume -= 0.2">Vol-</button>
+</div><button onclick="off()">off</button></div>
         <script> function myFunction() {
 
   var x = document.getElementById("ajs");
