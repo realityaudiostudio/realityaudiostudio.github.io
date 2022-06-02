@@ -1,0 +1,390 @@
+<html lang="en">
+<head>
+  <title>Mix Me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3010195382608605"
+     crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script>$(document).ready(function() {
+
+    $("slidingDiv").hide();
+    $(".show_hide").show();
+
+    $('.show_hide').click(function() {
+          
+         //$(".slidingDiv").slideToggle();
+         var isvisible = $(this).next('.slidingDiv').is(':visible');
+      
+         if ( isvisible ) {
+           $(this).next('.slidingDiv').hide();
+         } else{
+           $(this).next('.slidingDiv').show(); 
+         }
+    });
+
+});</script>
+  <style>
+      .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  
+.ic{margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+}
+.logo {float: left;}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 30px;
+  box-shadow: 0px 6px 6px #888888;
+  height: 30px;
+  overflow: hidden;
+  background-color: #000000;
+  opacity:0.6;
+  position: fixed;
+  width:100%
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  font-family: 'Nunito', sans-serif;
+  padding-left: 16px;
+  padding-right: 5px;
+  padding-top: 1px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+.subh {font-family: 'Nunito Sans', sans-serif;
+font-size: 20px;}
+div.example {
+      overflow: auto;
+      white-space: nowrap;
+    }
+    
+    div.example img {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding-bottom: 2px;
+      padding-left: 14px;
+      text-decoration: none;
+    }    
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .example::-webkit-scrollbar {
+        display: none;
+    }
+    
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .example {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+    #overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+   /* Audio playerinte code aan tto ith*/ 
+	.auds { background-color:rgba(0,0,0,0.5);
+			padding: 0;
+			margin: 0;
+			height: 100vh;
+			width: 100vw;
+			display: flex;
+			justify-content: center;
+		 align-items: center;
+		}
+    .player{
+			background-color: #D52F31;
+			width: 330px;
+			height: 190px;
+			border-radius: 8px;
+			box-shadow: 0 8px 0 0 rgb(190, 39, 42) ;
+			position: relative;
+			display: none;
+	    justify-content: center;
+  align-items: center;
+		}
+		.record{
+			height: 175px;
+			width: 175px;
+			background-color: #181312;
+			border-radius: 50%;
+			position: absolute;
+			top:10px;
+			left: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.record:before{
+			content: "";
+			position: absolute;
+			height: 135px;
+			width: 135px;
+			border:5px solid transparent;
+			border-top:5px solid #2C2424;
+			border-bottom:5px solid #2C2424;
+			border-radius: 50%;
+		}
+		.record:after{
+			content: "";
+			position: absolute;
+			height: 95px;
+			width: 95px;
+			border:5px solid transparent;
+			border-top:5px solid #2C2424;
+			border-bottom:5px solid #2C2424;
+			border-radius: 50%;
+		}
+		.label{
+			background-color: #181312;
+			height: 15px;
+			width: 15px;
+			border:20px solid #FF8E00;
+			border-radius: 50%;
+		}
+		.screw{
+			background-color: #181312;
+			height: 17px;
+			width: 17px;
+			border:10px solid #2c2c2c;
+			border-radius: 50%;
+			position: absolute;
+			top:-16px;
+			left: -16px;
+		}
+		.stick{
+			height: 90px;
+			width: 6px;
+			background-color: #ffffff;
+			position: absolute;
+			top:25px;
+			right: 95px;
+			transition: 1s;
+			transform-origin: top; 
+		}
+		.play{
+			transform:rotate(30deg);
+			transform-origin: top; 
+			transition: 1s;
+		}
+		.stick:before{
+			content: "";
+			height: 40px;
+			width: 6px;
+			background-color: #ffffff;
+			position: absolute;
+			transform: rotate(30deg);
+			bottom:-36px;
+			right: 10px;
+		}
+		.stick:after{
+			content: "";
+			position: absolute;
+			height: 0;
+			width: 10px;
+			border-top: 18px solid #B2AEA6;
+			border-left:2px solid transparent;
+			border-right:2px solid transparent;
+			transform: rotate(30deg);
+			top:108px;
+			right: 12.5px;
+		}
+		.power{
+			height: 28px;
+			width: 28px;
+			background-color: #ED5650;
+			border-radius: 50%;
+			position: absolute;
+			bottom: 20px;
+			right: 30px;
+			border:none;
+			border:3.5px solid rgb(190, 39, 42) ;
+			animation-play-state: paused;
+			outline: none;
+		}
+		.on{
+			animation: rotate 3s 1s linear infinite;
+		}
+		@keyframes rotate{
+			100%{
+				transform: rotate(360deg);
+			}
+		}
+		.slider{
+			transform: rotate(-90deg);
+			width: 90px;
+			height: 7px;
+			-webkit-appearance:none;
+			background-color: rgb(190, 39, 42) ;
+			border:6px solid #ED5650 ;
+			border-radius: 3px;
+			outline: none;
+			position: absolute;
+			left: 233px;
+			top:60px;
+		}
+		.slider::-webkit-slider-thumb{
+			-webkit-appearance:none;
+			background-color: white;
+			width:10px;
+			height: 12px; 
+			cursor: pointer;
+		}
+		.loader{
+			height: 100vh;
+			width: 100vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #181312;
+			font-family: 'Rubik',sans-serif;
+			font-size: 22px;
+
+		}
+  
+    /* Audio Player kazhinjtto */
+  </style>
+</head>
+<body>
+    <div style="width: 100%; height: 20px;"></div>
+    <div class="head" ><img src="img/logo.png"width="33" height="33"><img class="ic" src="img/icon.png" onclick="myFunction()" width="43" height="43" ></div>
+    <div style="width: 100%; height: 20px; background-color: white;"></div>
+    <div><ul id="ajs">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">Releases</a></li>
+        <li><a href="#contact">Artists</a></li>
+        <li><a href="#about">Games</a></li>
+        <li><a href="#about">Gallery</a></li>
+      </ul></div>
+      <p class="subh">What's new</p>
+      <div class="example"><img src="img/Rectangle 2.png" onclick="on()" alt="Trulli" style="width:80px; height: 80px;">
+        <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+        <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+        <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+        <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+        <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;"></div>
+        <p class="subh">Enjoy Instrumentals</p>
+        <div class="example"><img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+            <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+            <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+            <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+            <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+            <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;"></div>
+            <div style="width: 100%; height: 150px; background-color: #5F5C5C;"></div>
+            <p class="subh">Composer's Pick</p>
+        <div class="example"><img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+            <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+            <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+            <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+            <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+            <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;"></div>
+  <p class="subh">Composer's Pick</p>
+
+        <div class="example"><img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+
+            <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+
+            <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+
+            <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+
+            <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;">
+
+            <img src="img/Rectangle 2.png" alt="Trulli" style="width:80px; height: 80px;"></div>
+  <div id="overlay"><div class="loader">LOADING</div>
+	<div class="auds"><div class="player">
+		<div class="record">
+			<div class="label"></div>
+		</div>
+		<div class="stick">
+			<div class="screw"></div>
+		</div>
+		<button class="power"></button>
+		<div class="slidecontainer">
+  		<input type="range" class="slider" min="0" max="1" step="0.1" value="0.7">
+	</div>
+	</div>
+	<audio loop class="mysong" src="https://static.muzlo.cc/download/9293/Riverdale-Cast-feat-KJ-Apa-Camila-Mendes-Lili-Reinhart_-_Mad-World.mp3" preload="auto"></audio>
+		<button onclick="off()">off</button> </div></div>
+        <script> function myFunction() {
+
+  var x = document.getElementById("ajs");
+
+  if (x.style.display === "none") {
+
+    x.style.display = "block";
+
+  } else {
+
+    x.style.display = "none";
+
+  }
+
+} </script>
+ <script> function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}</script>
+  <script>		var state=0;
+		$(window).load(function(){
+             $(".loader").hide();
+             $(".player").show();
+        });
+		$(document).ready(function(){
+			$(".power").click(function(){
+  				$(".record").toggleClass('on');
+  				$(".stick").toggleClass('play');
+  				if(state==0){
+  					setTimeout(function(){
+  					 $(".mysong")[0].play();
+  					},1000);
+  					state=1;
+  				}
+  				else{
+  					$(".mysong")[0].pause();
+  					state=0;
+  				}
+  				$(".slider").change(function(){
+  					$(".mysong")[0].volume=this.value;
+  				});
+  			});
+  			
+    });</script>
+</body>
