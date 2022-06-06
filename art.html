@@ -82,56 +82,95 @@ li a:hover {
 }
 .subh {font-family: 'Nunito Sans', sans-serif;
 font-size: 20px;}
-.dethead{font-family: 'Nunito Sans', sans-serif;font-size: 20px;font-weight: bold;}
+.dethead{font-family: 'Nunito Sans', sans-serif;font-size: 20px;font-weight: bold;padding-left: 5px;}
 .detp{font-family: 'Nunito Sans', sans-serif;font-size: 20px;font-weight: lighter}
 .song{display: flex;padding-left:14px ;}
 .det{padding-left: 10px;}
 .get{color: white;background:#363535; width: fit-content;font-family: 'Nunito Sans', sans-serif;padding: 5px;}
-    #overlay {
-  position: fixed; /* Sit on top of the page content */
+
+.modal {
   display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  
-}/*profile inte sthalam*/
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
   margin: auto;
-  text-align: center;
-font-family: 'Nunito Sans', sans-serif;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
 }
 
-.title {
-  color: grey;
-  font-size: 18px;
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-.card a {
+.close:hover,
+.close:focus {
+  color: #000;
   text-decoration: none;
-  font-size: 22px;
-  color: black;
+  cursor: pointer;
 }
 /*profile done*/
+.mart{display: flex;font-family: 'Nunito Sans', sans-serif;padding-left: 10px;}
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.collapsible {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.active, .collapsible:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #ffffff;
+  font-family: 'Nunito Sans', sans-serif;
+ 
+}
   </style>
 </head>
 <body>
@@ -146,162 +185,79 @@ button {
         <li><a href="#about">Gallery</a></li>
       </ul></div>
       <p class="subh">Artists</p>
-      <div class="card">
-        <img src="img/alan.png" alt="John" style="width:100%">
-        <h1>Alan Jose Santo</h1>
-        <p class="title">Music Producer</p>
-        <p>Keyboard, Vocals,Melodica</p>
-        <div style="margin: 24px 0;">
-          <a href="#"><i class="fa fa-instagram"></i></a> 
-          <a href="#"><i class="fa fa-youtube"></i></a>  
-          <a href="#"><i class="fa fa-linkedin"></i></a>  
-          <a href="#"><i class="fa fa-facebook"></i></a> 
-        </div>
-        <p><button>Contact</button></p>
-      </div><!--2-->
-      <div class="card">
-        <img src="img/mms.png" alt="John" style="width:100%">
-        <h1>Milan Martin Santo</h1>
-        <p class="title">Guitarist</p>
-        <p>Guitar,Vocal,Camera</p>
-        <div style="margin: 24px 0;">
-          <a href="#"><i class="fa fa-instagram"></i></a> 
-          <a href="#"><i class="fa fa-twitter"></i></a>  
-          <a href="#"><i class="fa fa-linkedin"></i></a>  
-          <a href="#"><i class="fa fa-facebook"></i></a> 
-        </div>
-        <p><button>Contact</button></p>
+      <button type="button" class="collapsible"><div class="chip">
+        <img src="img/alan.png" alt="Person" width="96" height="96">
+       Alan Jose Santo
+      </div></button>
+      <div class="content">
+        <p>Composer Programmer Arranger Singer Vocalist</br>
+
+          FEATURED ORIGINALS<br>
+          
+          <li>Hruthil Anandham as a Music Director</li>
+          
+          <li>Kurisin Chuvattil as a Music Director</li>
+          
+          Easho Nadha as a Music Director #trending no 1 in our channel
+          
+        <li>Ponthaarakam as a Music Director</li>
+          
+      <li>Eswara En Daivame as a vocalist and Music Director</li>
+          
+    <li> Nadhan Easho as a music director</li>
+          
+          <li>Yeshuvin Paithalam as a music director</li>
+          
+        <li>Unni Easho Pirannanaal as a BGM</li>
+          
+      <li>Simply Me Original Background Score as a programmer</p>
       </div>
-      <!--3-->
-      <div class="card">
-        <img src="img/sj.png" alt="John" style="width:100%">
-        <h1>Santo Jose</h1>
-        <p class="title">Vocalist</p>
-        <p>Keyboard, Vocal, Camera</p>
-        <div style="margin: 24px 0;">
-          <a href="#"><i class="fa fa-instagram"></i></a> 
-          <a href="#"><i class="fa fa-twitter"></i></a>  
-          <a href="#"><i class="fa fa-linkedin"></i></a>  
-          <a href="#"><i class="fa fa-facebook"></i></a> 
-        </div>
-        <p><button>Contact</button></p>
-      </div>
-      <!--4
-      <div class="card">
-        <img src="img/Rectangle 2.png" alt="John" style="width:100%">
-        <h1>John Doe</h1>
-        <p class="title">CEO & Founder, Example</p>
-        <p>Harvard University</p>
-        <div style="margin: 24px 0;">
-          <a href="#"><i class="fa fa-instagram"></i></a> 
-          <a href="#"><i class="fa fa-twitter"></i></a>  
-          <a href="#"><i class="fa fa-linkedin"></i></a>  
-          <a href="#"><i class="fa fa-facebook"></i></a> 
-        </div>
-        <p><button>Contact</button></p>
-      </div>-->
+      <button type="button" class="collapsible"><div class="chip">
+        <img src="img/mms.png" alt="Person" width="96" height="96">
+       Milan Martin Santo
+      </div></button>
+      <div class="content">
+        <p>Composer Singer Vocalist Guitarist 
+
+          FEATURED ORIGINALS
+          
+          <li>Ponthaarakam as a vocalist</li>
+          
+          <li>Unni Easho Pirannanaal as a vocalist</li>
+          
+          <li>Simply Me Original Background Score as a Cinematographer</li></p>      </div>
+      <button type="button" class="collapsible"><div class="chip">
+        <img src="img/sj.png" alt="Person" width="96" height="96">
+       Santo Jose
+      </div></button>
+      <div class="content">
+        <p>Singer Vocalist 
+
+          FEATURED ORIGINALS
+          
+          <li>Unni Easho Pirannanaal as a vocalist</li>
+          
+          <li>Nadhan Easho as a Vocalist</li>
+          
+          <li>Easho Nadha as a cinematographer #trending no 1 in our channel</li></p>      </div>
+      
+      <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+        
       <p class="detp" style="font-size:small; text-align: center;">copyright@Reality Audio Studio</p>
-  <div id="overlay">
-	<div class="auds"> <div class="audio-player">
   
-  <audio src="https://docs.google.com/uc?export=download&id=18pvoEsXC5BRRs39-YejPiJaRRs617pnT"></audio>
-  <div class="controls">
-    <button class="player-button">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#FFFFFF">
-  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-</svg>
-    </button>
-    <input type="range" class="timeline" max="100" value="0">
-    <button class="sound-button">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#FFFFFF">
-  <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd" />
-</svg>
-    </button>
-		</div><button onclick="off()">off</button>
-</div>
-	  </div></div>
-        <script> function myFunction() {
-
-  var x = document.getElementById("ajs");
-
-  if (x.style.display === "none") {
-
-    x.style.display = "block";
-
-  } else {
-
-    x.style.display = "none";
-
-  }
-
-} </script>
- <script> function on() {
-  document.getElementById("overlay").style.display = "block";
-}
-
-function off() {
-  document.getElementById("overlay").style.display = "none";
-}</script>
-  <script>const playerButton = document.querySelector('.player-button'),
-      audio = document.querySelector('audio'),
-      timeline = document.querySelector('.timeline'),
-      soundButton = document.querySelector('.sound-button'),
-      playIcon = `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#FFFFFF">
-    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-  </svg>
-      `,
-      pauseIcon = `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#FFFFFF">
-  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
-</svg>
-      `,
-      soundIcon = `
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#FFFFFF">
-  <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd" />
-</svg>`,
-      muteIcon = `
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#FFFFFF">
-  <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-</svg>`;
-
-function toggleAudio () {
-  if (audio.paused) {
-    audio.play();
-    playerButton.innerHTML = pauseIcon;
-  } else {
-    audio.pause();
-    playerButton.innerHTML = playIcon;
-  }
-}
-
-playerButton.addEventListener('click', toggleAudio);
-
-function changeTimelinePosition () {
-  const percentagePosition = (100*audio.currentTime) / audio.duration;
-  timeline.style.backgroundSize = `${percentagePosition}% 100%`;
-  timeline.value = percentagePosition;
-}
-
-audio.ontimeupdate = changeTimelinePosition;
-
-function audioEnded () {
-  playerButton.innerHTML = playIcon;
-}
-
-audio.onended = audioEnded;
-
-function changeSeek () {
-  const time = (timeline.value * audio.duration) / 100;
-  audio.currentTime = time;
-}
-
-timeline.addEventListener('change', changeSeek);
-
-function toggleSound () {
-  audio.muted = !audio.muted;
-  soundButton.innerHTML = audio.muted ? muteIcon : soundIcon;
-}
-
-soundButton.addEventListener('click', toggleSound);</script>
 </body>
