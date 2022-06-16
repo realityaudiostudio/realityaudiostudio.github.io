@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="img/logo.png">
+  <link rel="manifest" href="manifest.json">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3010195382608605"
      crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -383,4 +384,9 @@ function off() {
   document.getElementById("overlay").style.display = "none";
 }
   </script>
+<script> 
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('/service-worker.js'); 
+	} 
+</script>
 </body>
