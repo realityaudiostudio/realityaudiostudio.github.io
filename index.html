@@ -125,31 +125,55 @@ div.scrollmenu a {
 hr.solid {
   border-top: 1px ;
 }
-    #overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
+   .overlay {font-family: 'Nunito Sans', sans-serif;
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
 }
-#overlay2{
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
 }
    /* Audio playerinte code aan tto ith*/ 
 	.auds { background-color:rgba(0,0,0,0.5);
@@ -294,16 +318,24 @@ hr.solid {
 </head>
 <body>
     <div style="width: 100%; height: 20px;"></div>
-    <div class="head" ><img src="img/logo.png"width="55" height="55"><img class="ic" src="img/icon.png" onclick="myFunction()" width="43" height="43" ></div>
+    <div class="head" ><img src="img/logo.png"width="55" height="55"><img class="ic" src="img/icon.png" onclick="openNav()" width="43" height="43" ></div>
     <div style="width: 100%; height: 20px; background-color: white;"></div>
-    <div><ul id="ajs">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="release.html">Releases</a></li>
-        <li><a href="art.html">Artists</a></li>
-        <li><a href="games.html">Games</a></li>
-        <li><a href="search.html">Search</a></li>
-      </ul></div>
-
+    <!--<div><ul id="ajs">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li><</li>
+      </ul></div>-->
+<div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="release.html">Releases</a>
+          <a href="art.html">Artists</a>
+          <a href="games.html">Games</a>
+          <a href="search.html">Search</a>
+        </div>
+      </div>
 <p class="detp">BetA V.1.5</p>
 	
       <p class="subh">What's new | </br><a href="release.html" style="font-size: 10px;text-align: left;">View more</a></p>
@@ -357,19 +389,7 @@ hr.solid {
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-  <div id="overlay">
-     <div class="auds"><div class="audio-player"><img src="img/fm.png" style="display: block;margin-left:auto;margin-right:auto;width: 158px;height: 158px;">
   
-  ><div class="det"><p class="dethead" style="color:white;">Fourth Melody</p><p class="detp" style="color:white;">Alan Jose Santo</p></div><button onclick="off()">X</button>
-</div>
-	  </div></div>
-    <!--randamathe-->
-    <div id="overlay2">
-      <div class="auds"><div class="audio-player"><img src="img/fm.png" style="display: block;margin-left:auto;margin-right:auto;width: 158px;height: 158px;">
-   
-   <div class="det"><p class="dethead" style="color:white;">Carol Pudding</p><p class="detp" style="color:white;">Alan Jose Santo</p></div><button onclick="off()">X</button>
- </div>
-     </div></div>
         <script> function myFunction() {
 
   var x = document.getElementById("ajs");
@@ -385,13 +405,14 @@ hr.solid {
   }
 
 } </script>
- <script> function on() {
-  document.getElementById("overlay").style.display = "block";
-}
-
-function off() {
-  document.getElementById("overlay").style.display = "none";
-}
+ <script>
+  function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+  }
   </script>
 <script> 
 	if ('serviceWorker' in navigator) {
