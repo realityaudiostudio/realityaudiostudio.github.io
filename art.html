@@ -47,38 +47,55 @@
   transform: translate(-50%);
 }
 .logo {float: left;}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  border-radius: 30px;
-  box-shadow: 0px 6px 6px #888888;
-  height: 30px;
-  overflow: hidden;
-  background-color: #000000;
-  opacity:0.6;
+.overlay {font-family: 'Nunito Sans', sans-serif;
+  height: 0%;
+  width: 100%;
   position: fixed;
-  width:100%
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
 }
 
-li {
-  float: left;
-}
-
-li a {
-  display: inline-block;
-  color: white;
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
   text-align: center;
-  font-size: 12px;
-  font-family: 'Nunito', sans-serif;
-  padding-left: 16px;
-  padding-right: 5px;
-  padding-top: 1px;
-  text-decoration: none;
+  margin-top: 30px;
 }
 
-li a:hover {
-  background-color: #111;
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
 }
 .subh {font-family: 'Nunito Sans', sans-serif;
 font-size: 20px;}
@@ -175,21 +192,25 @@ font-size: 20px;}
 </head>
 <body>
     <div style="width: 100%; height: 20px;"></div>
-    <div class="head" ><img src="img/logo.png"width="33" height="33"><img class="ic" src="img/icon.png" onclick="myFunction()" width="43" height="43" ></div>
+    <div class="head" ><img src="img/logo.png"width="33" height="33"><img class="ic" src="img/icon.png" onclick="openNav()" width="43" height="43" ></div>
     <div style="width: 100%; height: 20px; background-color: white;"></div>
-    <div><ul id="ajs">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="release.html">Releases</a></li>
-      <li><a href="art.html">Artists</a></li>
-      <li><a href="games.html">Games</a></li>
-        <li><a href="#about">Gallery</a></li>
-      </ul></div>
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+  <a href="index.html">Home</a>
+        <a href="release.html">Releases</a>
+        <a href="art.html">Artists</a>
+        <a href="games.html">About</a>
+        <a href="store.html">Store</a>
+      </div>
+    </div>
       <p class="subh">Artists</p>
       <button type="button" class="collapsible"><div class="chip">
         <img src="img/alan.png" alt="Person" width="96" height="96">
        Alan Jose Santo
       </div></button>
       <div class="content">
+        <a href="https://docs.google.com/document/d/e/2PACX-1vT7l4zrHkJtv0jIf58X8pdLF5mGFhvWtNspmqOE4GtXJrl848zJTDjJXAGebW12FVIjTbDZCGjstMUz/pub">More About</a>
         <p>Composer Programmer Arranger Singer Vocalist</br>
 
           FEATURED ORIGINALS<br>
@@ -217,6 +238,7 @@ font-size: 20px;}
        Milan Martin Santo
       </div></button>
       <div class="content">
+        <a href="https://docs.google.com/document/d/e/2PACX-1vTubTCTK0ySan8wGMg8X-MF14q8lQNzqh6xGC8QYGRNLgDetauQZY3An8jNR_VVg34WOudpdG5pgtVR/pub">More About</a>
         <p>Composer Singer Vocalist Guitarist 
 
           FEATURED ORIGINALS
@@ -227,10 +249,11 @@ font-size: 20px;}
           
           <li>Simply Me Original Background Score as a Cinematographer</li></p>      </div>
       <button type="button" class="collapsible"><div class="chip">
-        <img src="img/sj.png" alt="Person" width="96" height="96">
+        <img src="https://lh4.googleusercontent.com/XkCaJ9KrinjhkAi6KarLEAzWard5U0KTfawb3N1H6eCf0sqfTDBa-UqCsIC8j3XJT-G4Wj9wGL1fgQs-ihN_2lsD01cwJcDYtva4d0e8epAjWGMS_3wgazryyObs6VxXsGbHRUOUNst8cx9zHg" alt="Person" width="96" height="96">
        Santo Jose
       </div></button>
       <div class="content">
+        <a href="https://docs.google.com/document/d/e/2PACX-1vSw5peubfvof4mVeRZhWV9Vwf1PicFfj6eWuz8WE5g8_3JhfjZENdS0XqkDnH4vmMdBUdrj6D2o-sVo/pub">More about</a>
         <p>Singer Vocalist 
 
           FEATURED ORIGINALS
@@ -272,6 +295,15 @@ font-size: 20px;}
           }
         
         } </script>
+        <script>
+          function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+          }
+          
+          function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+          }
+          </script>
       <p class="detp" style="font-size:small; text-align: center;">copyright@Reality Audio Studio</p>
   
 </body>

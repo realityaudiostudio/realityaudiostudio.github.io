@@ -50,42 +50,7 @@
   transform: translate(-50%);
 }
 .logo {float: left;}
-ul {display:none;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  border-radius: 30px;
-  box-shadow: 0px 6px 6px #888888;
-  height: 30px;
-  overflow: hidden;
-  background-color: #000000;
-  opacity:0.6;
-  position: fixed;
-  width:100%;
-	 
 
-}
-
-li {float:left;
- justify-content:center;
-	align-items:center;
-}
-
-li a {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  font-size: 12px;
-  font-family: 'Nunito', sans-serif;
-  padding-left: 16px;
-  padding-right: 5px;
-  padding-top: 1px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}
 .subh {font-family: 'Nunito Sans', sans-serif;
 font-size: 20px;width:100%; }
 .subh a{color:#000000; text-decoration:none;}
@@ -144,6 +109,8 @@ hr.solid {
   width: 100%;
   text-align: center;
   margin-top: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
 .overlay a {
@@ -175,6 +142,8 @@ hr.solid {
   right: 35px;
   }
 }
+.abt {display: flex; color: #f1f1f1;align-items: center;justify-content: center; font-size: 40px;} 
+.abt img{border: 5px solid rgb(221, 17, 17);}
    /* Audio playerinte code aan tto ith*/ 
 	.auds { background-color:rgba(0,0,0,0.5);
 			padding: 0;
@@ -320,21 +289,18 @@ hr.solid {
     <div style="width: 100%; height: 20px;"></div>
     <div class="head" ><img src="img/logo.png"width="55" height="55"><img class="ic" src="img/icon.png" onclick="openNav()" width="43" height="43" ></div>
     <div style="width: 100%; height: 20px; background-color: white;"></div>
-    <!--<div><ul id="ajs">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li><</li>
-      </ul></div>-->
+    
 <div id="myNav" class="overlay">
+  
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
-		<a href="index.html">Home</a>
+		<div class="abt"><a href="#story"><img src="img/logo.png" style="width:80px; height:80px; border-radius: 50%;"></a><p style="padding-left:10px;"> MIX ME</p></div>
+    <a href="index.html">Home</a>
           <a href="release.html">Releases</a>
           <a href="art.html">Artists</a>
-          <a href="games.html">Games</a>
-          <a href="search.html">Search</a>
+          <a href="games.html">About</a>
+          <a href="store.html">Store</a>
+          <a href="#home" style="color: rgb(190, 190, 190);font-size: 20px;">Social Links</a>
         </div>
       </div>
 <p class="detp">BetA V.1.5</p>
@@ -378,18 +344,7 @@ hr.solid {
             <p class="detp" style="font-size:small; text-align: center;">copyright@Reality Audio Studio</p>
 <div class="get"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdqjMeTXlcEbkVK2h5ZqAqrdDTyi7ARH2mj9CBAup7i6okYvg/viewform?usp=sf_link">Send Feedback</a></div></div>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3010195382608605"
-     crossorigin="anonymous"></script>
-<!-- Mix me -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-3010195382608605"
-     data-ad-slot="8676061554"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
   
         <script> function myFunction() {
 

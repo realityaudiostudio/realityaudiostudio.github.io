@@ -46,44 +46,61 @@
   transform: translate(-50%);
 }
 .logo {float: left;}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  border-radius: 30px;
-  box-shadow: 0px 6px 6px #888888;
-  height: 30px;
-  overflow: hidden;
-  background-color: #000000;
-  opacity:0.6;
+.overlay {font-family: 'Nunito Sans', sans-serif;
+  height: 0%;
+  width: 100%;
   position: fixed;
-  width:100%
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
 }
 
-li {
-  float: left;
-}
-
-li a {
-  display: inline-block;
-  color: white;
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
   text-align: center;
-  font-size: 12px;
-  font-family: 'Nunito', sans-serif;
-  padding-left: 16px;
-  padding-right: 5px;
-  padding-top: 1px;
-  text-decoration: none;
+  margin-top: 30px;
 }
 
-li a:hover {
-  background-color: #111;
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
 }
 .subh {font-family: 'Nunito Sans', sans-serif;
 font-size: 20px;}
 .dethead{font-family: 'Nunito Sans', sans-serif;font-size: 20px;font-weight: bold;}
 .detp{font-family: 'Nunito Sans', sans-serif;font-size: 20px;font-weight: lighter}
-.song{display: flex;padding-left:14px ;text-decoration: none;}
+.song{display: flex;padding-left:14px ;text-decoration: none;justify-content: center;align-items: center;}
 .det{padding-left: 10px;}
 .get{color: white;background:#363535; width: fit-content;font-family: 'Nunito Sans', sans-serif;padding: 5px;}
     #overlay {
@@ -241,38 +258,28 @@ font-size: 20px;}
 </head>
 <body>
     <div style="width: 100%; height: 20px;"></div>
-    <div class="head" ><img src="img/logo.png"width="33" height="33"><img class="ic" src="img/icon.png" onclick="myFunction()" width="43" height="43" ></div>
+    <div class="head" ><img src="img/logo.png"width="33" height="33"><img class="ic" src="img/icon.png" onclick="openNav()" width="43" height="43" ></div>
     <div style="width: 100%; height: 20px; background-color: white;"></div>
-    <div><ul id="ajs">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="release.html">Releases</a></li>
-      <li><a href="art.html">Artists</a></li>
-      <li><a href="games.html">Games</a></li>
-        <li><a href="#about">Gallery</a></li>
-      </ul></div>
-      <p class="subh">Games</p>
-      <div class="song"><img src="img/logo.png" alt="Trulli" style="width:80px; height: 80px; "><div class="det"><p class="dethead">Happy Birthday Reality Audio Studio</p><p class="detp">Cake buying game</p><a href="https://scratch.mit.edu/projects/694294174/"><div class="get">play now</div></a></div></div>
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+  <a href="index.html">Home</a>
+        <a href="release.html">Releases</a>
+        <a href="art.html">Artists</a>
+        <a href="games.html">About</a>
+        <a href="store.html">Store</a>
+      </div>
+    </div>
+      <p class="subh">About</p>
+      <div class="song"><img src="img/logo.png" alt="Trulli" style="width:80px; height: 80px;border: 1px solid;border-radius: 50%; "><div class="det"><p class="dethead">Mix ME</p><p class="detp">Happy Streaming...</p></div></div>
         <div style="width: 100%; height: 20px; background-color: white;"></div>
-        
-  <div id="overlay">
-	<div class="auds"> <div class="audio-player">
-  
-  <audio src="https://docs.google.com/uc?export=download&id=18pvoEsXC5BRRs39-YejPiJaRRs617pnT"></audio>
-  <div class="controls">
-    <button class="player-button">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#FFFFFF">
-  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-</svg>
-    </button>
-    <input type="range" class="timeline" max="100" value="0">
-    <button class="sound-button">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#FFFFFF">
-  <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd" />
-</svg>
-    </button>
-		</div><button onclick="off()">off</button>
-</div>
-	  </div></div>
+        <p class="detp" style="padding: 10px;font-size:medium;">It was a long dream for Reality Audio Studio team to get their own streaming web app Mix ME to public. Reality Audio Studio creates the new dimensions of music and tries to share all over the world. As part of this, we planned to stream music from own settings and minimal designs, we completley switched to our new platform,Mix ME. And this will be the official site for Reality Audio Studio. Also we are planning to stream musics by other small scale talented musicians for free using this platform. This will encourage musicians to enhance them in better manner.</p>
+        <p class="dethead">Why Web app?</p>
+        <p class="detp" style="padding: 10px;font-size:medium;">It was our desire to create not just a website , but an app with a nice interface. We tried making android apps. But unfortunatley failed to publish on google play store. So we created app using HTML,CSS,javascript and hosted using github and made settings to install web app. Advantage is that space of your phone will be consumed in very less manner and also to enjoy from cross platforms.</p>
+        <p class="dethead">What about Artists?</p>
+        <p class="detp" style="padding: 10px;font-size:medium;">We encourage new artists to share their original music content through our app so that they will get an oppurtunity to listen songs in high quality. We will soon add details about artist sharing.</p>
+        <p class="dethead">Who Debveloped Mix ME?</p>
+        <p class="detp" style="padding: 10px;font-size:medium;">This web app is designed from scratch. And completley developed By Alan Jose Santo, Music Producer at Reality Audio Studio. And used Visual Studio Code to develop this. Also used code snippets from W3 Schools and redesigned it.</p>
         <script> function myFunction() {
 
   var x = document.getElementById("ajs");
@@ -288,73 +295,13 @@ font-size: 20px;}
   }
 
 } </script>
- <script> function on() {
-  document.getElementById("overlay").style.display = "block";
-}
-
-function off() {
-  document.getElementById("overlay").style.display = "none";
-}</script>
-  <script>const playerButton = document.querySelector('.player-button'),
-      audio = document.querySelector('audio'),
-      timeline = document.querySelector('.timeline'),
-      soundButton = document.querySelector('.sound-button'),
-      playIcon = `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#FFFFFF">
-    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-  </svg>
-      `,
-      pauseIcon = `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#FFFFFF">
-  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
-</svg>
-      `,
-      soundIcon = `
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#FFFFFF">
-  <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd" />
-</svg>`,
-      muteIcon = `
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#FFFFFF">
-  <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-</svg>`;
-
-function toggleAudio () {
-  if (audio.paused) {
-    audio.play();
-    playerButton.innerHTML = pauseIcon;
-  } else {
-    audio.pause();
-    playerButton.innerHTML = playIcon;
+<script>
+  function openNav() {
+    document.getElementById("myNav").style.height = "100%";
   }
-}
-
-playerButton.addEventListener('click', toggleAudio);
-
-function changeTimelinePosition () {
-  const percentagePosition = (100*audio.currentTime) / audio.duration;
-  timeline.style.backgroundSize = `${percentagePosition}% 100%`;
-  timeline.value = percentagePosition;
-}
-
-audio.ontimeupdate = changeTimelinePosition;
-
-function audioEnded () {
-  playerButton.innerHTML = playIcon;
-}
-
-audio.onended = audioEnded;
-
-function changeSeek () {
-  const time = (timeline.value * audio.duration) / 100;
-  audio.currentTime = time;
-}
-
-timeline.addEventListener('change', changeSeek);
-
-function toggleSound () {
-  audio.muted = !audio.muted;
-  soundButton.innerHTML = audio.muted ? muteIcon : soundIcon;
-}
-
-soundButton.addEventListener('click', toggleSound);</script>
+  
+  function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+  }
+  </script>
 </body>

@@ -1,0 +1,260 @@
+<html lang="en">
+<head>
+  <title>Mix Me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="icon" type="image/x-icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3010195382608605"
+     crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script>$(document).ready(function() {
+
+    $("slidingDiv").hide();
+    $(".show_hide").show();
+
+    $('.show_hide').click(function() {
+          
+         //$(".slidingDiv").slideToggle();
+         var isvisible = $(this).next('.slidingDiv').is(':visible');
+      
+         if ( isvisible ) {
+           $(this).next('.slidingDiv').hide();
+         } else{
+           $(this).next('.slidingDiv').show(); 
+         }
+    });
+
+});</script>
+  <style>
+      .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  
+.ic{margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+}
+.logo {float: left;}
+.overlay {font-family: 'Nunito Sans', sans-serif;
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+.subh {font-family: 'Nunito Sans', sans-serif;
+font-size: 20px;}
+.dethead{font-family: 'Nunito Sans', sans-serif;font-size: 20px;font-weight: bold;}
+.detp{font-family: 'Nunito Sans', sans-serif;font-size: 20px;font-weight: lighter}
+.song{display: flex;padding-left:14px ;text-decoration: none;justify-content: center;align-items: center;}
+.det{padding-left: 10px;}
+.get{color: white;background:#363535; width: fit-content;font-family: 'Nunito Sans', sans-serif;padding: 5px;}
+    #overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  
+}
+    /* Audio Player kazhinjtto */
+  </style>
+</head>
+<body>
+    <div style="width: 100%; height: 20px;"></div>
+    <div class="head" ><img src="img/logo.png"width="33" height="33"><img class="ic" src="img/icon.png" onclick="openNav()" width="43" height="43" ></div>
+    <div style="width: 100%; height: 20px; background-color: white;"></div>
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+  <a href="index.html">Home</a>
+        <a href="release.html">Releases</a>
+        <a href="art.html">Artists</a>
+        <a href="games.html">About</a>
+        <a href="store.html">store</a>
+      </div>
+    </div>
+      <p class="subh">Connector Store</p>
+      <!-- Image header -->
+  <div class="w3-display-container w3-container">
+    <img src="https://source.unsplash.com/eCSL1ujUyD4" style="width:100%" alt="music">
+    <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+      <h1 class="w3-jumbo w3-hide-small">Connect Mix ME To your Keyboard</h1>
+      <h1 class="w3-hide-large w3-hide-medium" >Connect Mix ME To your Keyboard</h1>
+      <h1 class="w3-hide-small">Your Keyboard Fullfils from Mix ME</h1>
+      <p><a href="#jeans" class="w3-button w3-black w3-padding-large w3-large">Start</a></p>
+    </div>
+  </div>
+
+  <div class="w3-container w3-text-grey" id="jeans">
+    <p>8 items</p>
+  </div>
+
+  <!-- Product grid -->
+  <div class="w3-row w3-grayscale">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="img/logo.png" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+            <button onclick="location.href='https://google.com';" class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+          </div></div>
+        <p>Yamaha Style Set 1<br><b>₹10.00</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="img/logo.png" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+            <button onclick="location.href='https://google.com';" class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+          </div></div>
+        <p>Loops<br><b>₹10.00</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="img/logo.png" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button onclick="location.href='https://google.com';" class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>Loops<br><b>₹10.00</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="img/logo.png" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+            <button onclick="location.href='https://google.com';" class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>Loops<br><b>₹10.00</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="img/logo.png" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+            <button onclick="location.href='https://google.com';" class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+        </div></div>
+            <p>Multi OTS<br><b>₹10.00</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="img/logo.png" style="width:100%">
+          <span class="w3-tag w3-display-topleft">Sale</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button onclick="location.href='https://google.com';" class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>Tones<br><b>₹10.00</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <div class="w3-display-container">
+          <img src="img/logo.png" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+              <button onclick="location.href='https://google.com';" class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+          </div></div>
+              <p>keys<br><b>₹10.00</b></p>
+        </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="img/logo.png" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+            <button onclick="location.href='https://google.com';" class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+        </div></div>
+        <p>Loops<br><b>₹10.00</b></p>
+      </div>
+    </div>
+  </div>
+        <script> function myFunction() {
+
+  var x = document.getElementById("ajs");
+
+  if (x.style.display === "none") {
+
+    x.style.display = "block";
+
+  } else {
+
+    x.style.display = "none";
+
+  }
+
+} </script>
+<script>
+  function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+  }
+  </script>
+</body>
