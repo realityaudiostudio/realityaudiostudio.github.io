@@ -141,9 +141,31 @@ hr.solid {
   top: 15px;
   right: 35px;
   }
-}
+} .hdmg{
+width: 350px;
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;}
 .abt {display: flex; color: #f1f1f1;align-items: center;justify-content: center; font-size: 40px;} 
 .abt img{border: 5px solid rgb(221, 17, 17);}
+.container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
    /* Audio playerinte code aan tto ith*/ 
 	.auds { background-color:rgba(0,0,0,0.5);
 			padding: 0;
@@ -300,10 +322,11 @@ hr.solid {
           <a href="art.html">Artists</a>
           <a href="games.html">About</a>
           <a href="store.html">Store</a>
-          <a href="#home" style="color: rgb(190, 190, 190);font-size: 20px;">Social Links</a>
+          <a href="https://realityaudiostudio.github.io/rashub/" style="color: rgb(190, 190, 190);font-size: 20px;">Social Links</a>
         </div>
       </div>
-<p class="detp">BetA V.1.5</p>
+<p id="greetings" class="detp" style="font-size: 15px;"></p>
+<a href="amp.html"><img src="img/webs.png" alt="abc" class="hdmg"></img></a>
 	
       <p class="subh">What's new | </br><a href="release.html" style="font-size: 10px;text-align: left;">View more</a></p>
 	
@@ -340,9 +363,12 @@ hr.solid {
 <div class="card"><a href="#"><img src="img/Rectangle 2.png" alt="Trulli" class="deti"></a></br>DEMO</div>
 <div class="card"><a href="#"><img src="img/Rectangle 2.png" alt="Trulli" class="deti"></a></br>DEMO</div>
 	</div>
+
+  <div style="width: 100%; height: 20px;"></div>
+  
             <div style="padding-left:10px;">
             <p class="detp" style="font-size:small; text-align: center;">copyright@Reality Audio Studio</p>
-<div class="get"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdqjMeTXlcEbkVK2h5ZqAqrdDTyi7ARH2mj9CBAup7i6okYvg/viewform?usp=sf_link">Send Feedback</a></div></div>
+            <p class="detp" style="font-size: 12px;">We are highly expecting your comments!</p><div class="get"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdqjMeTXlcEbkVK2h5ZqAqrdDTyi7ARH2mj9CBAup7i6okYvg/viewform?usp=sf_link">Send Feedback</a></div></div>
 
 
   
@@ -375,4 +401,17 @@ hr.solid {
 		navigator.serviceWorker.register('/service-worker.js'); 
 	} 
 </script>
+<script>var myDate = new Date();
+  var hrs = myDate.getHours();
+  
+  var greet;
+  
+  if (hrs < 12)
+    greet = 'Good Morning, Its Mix Me here';
+  else if (hrs >= 12 && hrs <= 17)
+    greet = 'Good Afternoon, Its Mix Me here';
+  else if (hrs >= 17 && hrs <= 24)
+    greet = 'Good Evening, Its Mix Me here';
+  
+  document.getElementById('greetings').innerHTML ='<b>' + greet + '</b>';</script>
 </body>
