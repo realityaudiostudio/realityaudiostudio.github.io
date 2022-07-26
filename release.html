@@ -4,44 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="img/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3010195382608605"
      crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-<script>$(document).ready(function() {
 
-    $("slidingDiv").hide();
-    $(".show_hide").show();
-
-    $('.show_hide').click(function() {
-          
-         //$(".slidingDiv").slideToggle();
-         var isvisible = $(this).next('.slidingDiv').is(':visible');
-      
-         if ( isvisible ) {
-           $(this).next('.slidingDiv').hide();
-         } else{
-           $(this).next('.slidingDiv').show(); 
-         }
-    });
-
-});</script>
   <style>
-      
-  
-  
-.ic{margin: 0;
-  position: absolute;
-  left: 50%;
-  -ms-transform: translate(-50%);
-  transform: translate(-50%);
-}
-.logo {float: left;}
+    @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+    body{font-family: 'Nunito', sans-serif;}
+  h2{height:8px;}
+.ico{display: flex;
+justify-content: space-between;}
+.hp{padding:5px;}
+.adh{display: flex;justify-content: space-around;align-items: center; background-color: #262626;
+width: 90%;height: 104px;padding:6px;border-radius: 9px;color: #ffffff;font-size: 18px;font-weight:50;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+margin: auto;}
 
 .subh {font-family: 'Nunito Sans', sans-serif;
 font-size: 20px;}
@@ -52,56 +30,7 @@ font-size: 20px;}
   }
 .det{padding-left: 14px;}
 .get{color: white;background:#363535; width: fit-content;font-family: 'Nunito Sans', sans-serif;padding: 5px;}
-.overlay {font-family: 'Nunito Sans', sans-serif;
-  height: 0%;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
-  overflow-y: hidden;
-  transition: 0.5s;
-}
 
-.overlay-content {
-  position: relative;
-  top: 25%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-}
-
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
-}
-
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-}
-
-@media screen and (max-height: 450px) {
-  .overlay {overflow-y: auto;}
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-  font-size: 40px;
-  top: 15px;
-  right: 35px;
-  }
-}
 .erangi {float: left;display: block;}
    .erangi img{width: 150px;
   height:150px;
@@ -109,161 +38,70 @@ font-size: 20px;}
  
     .card{font-family: 'Nunito Sans', sans-serif;
 	font-size: 10px; text-align: center;padding: 10px;}
-   /* Audio playerinte code aan tto ith*/ 
-	.auds { background-color:rgba(0,0,0,0.5);
-			padding: 0;
-			margin: 0;
-			height: 100vh;
-			width: 100vw;
-			display: flex;
-			justify-content: center;
-		 align-items: center;
-		}
-    .audio-player {
-  --player-button-width: 3em;
-  --sound-button-width: 2em;
-  --space: .5em;
-  width: 15rem;
-  height: 15rem;
-}
-	  .audio-icon {
-   width: 90%;
-   height: 90%;
+   /* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-.controls {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  margin-top: 10px;
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
 
-.player-button {
-  background-color: transparent;
-  border: 0;
-  width: var(--player-button-width);
-  height: var(--player-button-width);
-  cursor: pointer;
-  padding: 0;
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
 }
 
-.timeline {
-  -webkit-appearance: none;
-  width: calc(100% - (var(--player-button-width) + var(--sound-button-width) + var(--space)));
-  height: .5em;
-  background-color: #e5e5e5;
-  border-radius: 5px;
-  background-size: 0% 100%;
-  background-image: linear-gradient(#DE5E97, #DE5E97);
-  background-repeat: no-repeat;
-  margin-right: var(--space);
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
-.timeline::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  cursor: pointer;
-  opacity: 0;
-  transition: all .1s;
-  background-color: #a94672;
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
 }
 
-.timeline::-moz-range-thumb {
-  -webkit-appearance: none;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  cursor: pointer;
-  opacity: 0;
-  transition: all .1s;
-  background-color: #a94672;
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
-
-.timeline::-ms-thumb {
-  -webkit-appearance: none;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  cursor: pointer;
-  opacity: 0;
-  transition: all .1s;
-  background-color: #a94672;
-}
-
-.timeline::-webkit-slider-thumb:hover {
-  background-color: #943f65;
-}
-
-.timeline:hover::-webkit-slider-thumb {
-  opacity: 1;
-}
-
-.timeline::-moz-range-thumb:hover {
-  background-color: #943f65;
-}
-
-.timeline:hover::-moz-range-thumb {
-  opacity: 1;
-}
-
-.timeline::-ms-thumb:hover {
-  background-color: #943f65;
-}
-
-.timeline:hover::-ms-thumb {
-  opacity: 1;
-}
-
-.timeline::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: none;
-  background: transparent;
-}
-
-.timeline::-moz-range-track {
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: none;
-  background: transparent;
-}
-
-.timeline::-ms-track {
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: none;
-  background: transparent;
-}
-
-.sound-button {
-  background-color: transparent;
-  border: 0;
-  width: var(--sound-button-width);
-  height: var(--sound-button-width);
-  cursor: pointer;
-  padding: 0;
-}
-    /* Audio Player kazhinjtto */
   </style>
 </head>
 <body>
-    <div style="width: 100%; height: 20px;"></div>
-    <div class="head" ><img src="img/logo.png"width="33" height="33"><img class="ic" src="img/icon.png" onclick="openNav()" width="43" height="43" ></div>
-    <div style="width: 100%; height: 20px; background-color: white;"></div>
-    <div id="myNav" class="overlay">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <div class="overlay-content">
-  <a href="index.html">Home</a>
-        <a href="release.html">Releases</a>
-        <a href="art.html">Artists</a>
-        <a href="games.html">About</a>
-        <a href="store.html">Store</a>
-      </div>
-    </div>
-      <p class="subh">Releases</p>
+  <div style="width: 100%; height: 20px;"></div>
+  <div class="ico"><img src="img/icon.png" style="width: 30px;height:30px;" onclick="openNav()"><img src="img/logo.svg" style="width: 33px;height:35px;"></div>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="release.html">Releases</a>
+    <a href="art.html">Artists</a>
+    <a href="games.html">About</a>
+  </div>
+      <div class="hp"><h2 style="font-size: 25px;font-weight: bold;">Releases</h2><p>Get all the musics in one!</p>
+<div style="background:#000000;width:40px;height:4px;"></div>
+<div style="width: 100%;height:20px;"></div>
       <p><a href="search.html" style="text-decoration:none;font-family: 'Nunito Sans', sans-serif;border: solid 2px #363535; border-radius: 25px; padding:5px;color:#f1f1f1;background-color:#363535;font-size: 15px;">Search Releases</a></p>
       <div class="song"><a href="https://realityaudiostudio.github.io/mixme2/sng2.html"><img src="img/fm.png" alt="Trulli" style="width:120px; height: 120px;"></a><div class="det"><p class="dethead">Fourth Melody</p><p class="detp"> Alan Jose Santo</p><div class="get"><a href="https://realityaudiostudio.github.io/mixme2/sng2.html">Play</a></div></div></div>
         <div style="width: 100%; height: 40px; "></div>
@@ -313,6 +151,15 @@ font-size: 20px;}
     document.getElementById("myNav").style.height = "0%";
   }
   </script>
- 
+ <script>/* Set the width of the side navigation to 250px */
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  /* Set the width of the side navigation to 0 */
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
   
 </body>

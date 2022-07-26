@@ -1,0 +1,309 @@
+<html lang="en">
+<head>
+  <title>Mix Me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="img/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3010195382608605"
+     crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script>$(document).ready(function() {
+
+    $("slidingDiv").hide();
+    $(".show_hide").show();
+
+    $('.show_hide').click(function() {
+          
+         //$(".slidingDiv").slideToggle();
+         var isvisible = $(this).next('.slidingDiv').is(':visible');
+      
+         if ( isvisible ) {
+           $(this).next('.slidingDiv').hide();
+         } else{
+           $(this).next('.slidingDiv').show(); 
+         }
+    });
+
+});</script>
+  <style>
+      .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  
+.ic{margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+}
+.logo {float: left;}
+.overlay {font-family: 'Nunito Sans', sans-serif;
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+.subh {font-family: 'Nunito Sans', sans-serif;
+font-size: 20px;}
+.dethead{font-family: 'Nunito Sans', sans-serif;font-size: 20px;font-weight: bold;padding-left: 5px;}
+.detp{font-family: 'Nunito Sans', sans-serif;font-size: 20px;font-weight: lighter}
+.song{display: flex;padding-left:14px ;}
+.det{padding-left: 10px;}
+.get{color: white;background:#363535; width: fit-content;font-family: 'Nunito Sans', sans-serif;padding: 5px;}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*profile done*/
+.mart{display: flex;font-family: 'Nunito Sans', sans-serif;padding-left: 10px;}
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.collapsible {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.active, .collapsible:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #ffffff;
+  font-family: 'Nunito Sans', sans-serif;
+ 
+}
+  </style>
+</head>
+<body>
+    <div style="width: 100%; height: 20px;"></div>
+    <div class="head" ><img src="img/logo.png"width="33" height="33"><img class="ic" src="img/icon.png" onclick="openNav()" width="43" height="43" ></div>
+    <div style="width: 100%; height: 20px; background-color: white;"></div>
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+  <a href="index.html">Home</a>
+        <a href="release.html">Releases</a>
+        <a href="art.html">Artists</a>
+        <a href="games.html">About</a>
+        <a href="store.html">Store</a>
+      </div>
+    </div>
+      <p class="subh">Artists</p>
+      <button type="button" class="collapsible"><div class="chip">
+        <img src="img/alan.png" alt="Person" width="96" height="96">
+       Alan Jose Santo
+      </div></button>
+      <div class="content">
+        <a href="https://docs.google.com/document/d/e/2PACX-1vT7l4zrHkJtv0jIf58X8pdLF5mGFhvWtNspmqOE4GtXJrl848zJTDjJXAGebW12FVIjTbDZCGjstMUz/pub">More About</a>
+        <p>Composer Programmer Arranger Singer Vocalist</br>
+
+          FEATURED ORIGINALS<br>
+          
+          <li>Hruthil Anandham as a Music Director</li>
+          
+          <li>Kurisin Chuvattil as a Music Director</li>
+          
+          Easho Nadha as a Music Director #trending no 1 in our channel
+          
+        <li>Ponthaarakam as a Music Director</li>
+          
+      <li>Eswara En Daivame as a vocalist and Music Director</li>
+          
+    <li> Nadhan Easho as a music director</li>
+          
+          <li>Yeshuvin Paithalam as a music director</li>
+          
+        <li>Unni Easho Pirannanaal as a BGM</li>
+          
+      <li>Simply Me Original Background Score as a programmer</p>
+      </div>
+      <button type="button" class="collapsible"><div class="chip">
+        <img src="img/mms.png" alt="Person" width="96" height="96">
+       Milan Martin Santo
+      </div></button>
+      <div class="content">
+        <a href="https://docs.google.com/document/d/e/2PACX-1vTubTCTK0ySan8wGMg8X-MF14q8lQNzqh6xGC8QYGRNLgDetauQZY3An8jNR_VVg34WOudpdG5pgtVR/pub">More About</a>
+        <p>Composer Singer Vocalist Guitarist 
+
+          FEATURED ORIGINALS
+          
+          <li>Ponthaarakam as a vocalist</li>
+          
+          <li>Unni Easho Pirannanaal as a vocalist</li>
+          
+          <li>Simply Me Original Background Score as a Cinematographer</li></p>      </div>
+      <button type="button" class="collapsible"><div class="chip">
+        <img src="https://lh4.googleusercontent.com/XkCaJ9KrinjhkAi6KarLEAzWard5U0KTfawb3N1H6eCf0sqfTDBa-UqCsIC8j3XJT-G4Wj9wGL1fgQs-ihN_2lsD01cwJcDYtva4d0e8epAjWGMS_3wgazryyObs6VxXsGbHRUOUNst8cx9zHg" alt="Person" width="96" height="96">
+       Santo Jose
+      </div></button>
+      <div class="content">
+        <a href="https://docs.google.com/document/d/e/2PACX-1vSw5peubfvof4mVeRZhWV9Vwf1PicFfj6eWuz8WE5g8_3JhfjZENdS0XqkDnH4vmMdBUdrj6D2o-sVo/pub">More about</a>
+        <p>Singer Vocalist 
+
+          FEATURED ORIGINALS
+          
+          <li>Unni Easho Pirannanaal as a vocalist</li>
+          
+          <li>Nadhan Easho as a Vocalist</li>
+          
+          <li>Easho Nadha as a cinematographer #trending no 1 in our channel</li></p>      </div>
+      
+      <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+        <script> function myFunction() {
+
+          var x = document.getElementById("ajs");
+        
+          if (x.style.display === "none") {
+        
+            x.style.display = "block";
+        
+          } else {
+        
+            x.style.display = "none";
+        
+          }
+        
+        } </script>
+        <script>
+          function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+          }
+          
+          function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+          }
+          </script>
+      <p class="detp" style="font-size:small; text-align: center;">copyright@Reality Audio Studio</p>
+  
+</body>
