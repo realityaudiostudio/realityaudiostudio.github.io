@@ -421,6 +421,36 @@ display: block;
             <div style="padding-left:10px;">
             <p class="detp" style="font-size:small; text-align: center;">copyright@Reality Audio Studio</p>
             <p class="detp" style="font-size: 12px;">We are highly expecting your comments!</p><div class="get"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdqjMeTXlcEbkVK2h5ZqAqrdDTyi7ARH2mj9CBAup7i6okYvg/viewform?usp=sf_link">Send Feedback</a></div></div>
+            <!-- Messenger Chat plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "105483765622671");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v14.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
 
   
